@@ -1,0 +1,26 @@
+.navlink {
+  position: relative;
+  display: inline-block;
+  padding: var(--rem-half);
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navlink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+  background-color: var(--btn-bg-primary);
+}
+
+.navlink:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}

@@ -1,0 +1,38 @@
+:root {
+  /* btn */
+  --btn-bg-primary: #565bc3;
+  --btn-bg-secondary: #fafafd;
+
+  /* background color */
+  --hero-bg: #f1effe;
+  --app-bg: #f6f5fc;
+
+  /* unit */
+  --rem-1: 1rem;
+  --rem-half: 0.5rem;
+  --rem-2: 2rem;
+
+  /* border radius */
+  --radius: 5px;
+
+  /* color */
+  --primary-color: #565bc3;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.dark {
+  --app-bg: black;
+}
+
+.lightlight-text {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+#root {
+}
