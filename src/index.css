@@ -11,12 +11,14 @@
   --rem-1: 1rem;
   --rem-half: 0.5rem;
   --rem-2: 2rem;
+  --rem-3: 3rem;
 
   /* border radius */
   --radius: 5px;
 
   /* color */
   --primary-color: #565bc3;
+  --secondary-color: #fafafd;
 }
 
 * {
@@ -29,9 +31,14 @@
   --app-bg: black;
 }
 
-.lightlight-text {
+.highlight-text {
   color: var(--primary-color);
   font-weight: 600;
+}
+
+.heading {
+  font-weight: 700;
+  font-size: var(--rem-2);
 }
 
 #root {

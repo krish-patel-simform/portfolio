@@ -1,0 +1,34 @@
+.skill-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--rem-3);
+  gap: var(--rem-2);
+}
+
+.skill-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--rem-1);
+  align-items: center;
+}
+
+.skill-technology-list {
+  display: flex;
+  gap: var(--rem-1);
+}
+
+.skill-technology-card {
+  display: flex;
+  gap: var(--rem-1);
+  align-items: center;
+  background-color: var(--secondary-color);
+  border-radius: var(--radius);
+  padding: var(--rem-1);
+  cursor: pointer;
+
+  & > img {
+    height: 50px;
+    aspect-ratio: 1/1;
+  }
+}

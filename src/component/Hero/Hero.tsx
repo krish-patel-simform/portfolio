@@ -18,7 +18,7 @@ export default function Hero() {
           <p>Krish</p>
           <p>Patel</p>
         </div>
-        <p className="lightlight-text">Frontend Developer</p>
+        <p className="highlight-text">Frontend Developer</p>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis
           libero ipsam deleniti, perspiciatis voluptates quisquam iste

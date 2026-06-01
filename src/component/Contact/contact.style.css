@@ -1,0 +1,14 @@
+.contact-container {
+  display: flex;
+  padding: var(--rem-1);
+}
+
+.conatct__left {
+  flex: 1;
+  padding: var(--rem-2);
+}
+
+.contact__right {
+  flex: 1;
+  padding: var(--rem-2);
+}
