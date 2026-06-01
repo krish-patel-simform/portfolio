@@ -10,14 +10,14 @@ const ABOUT_INFO = [
     title: "Experience",
     content: "1+ Years",
     Icon: MoneyBag,
-    bgColor: "#A7A8E5",
+    bgColor: "#eaeaf7ff",
     iconFillColor: "#6B6DCE",
   },
   {
     title: "Projects",
     content: "10+ Completed",
     Icon: Laptop3,
-    bgColor: "#BDEACF",
+    bgColor: "#d4eedfff",
     iconFillColor: "#5CC189",
   },
   {
@@ -51,7 +51,10 @@ export default function About() {
             return (
               <div className="about__right-card-container">
                 <div key={index} className="about__right-card">
-                  <div>
+                  <div
+                    className="about__right-card__icon"
+                    style={{ backgroundColor: info.bgColor }}
+                  >
                     <info.Icon color={info.iconFillColor} size={"1.9rem"} />
                   </div>
                   <div className="about__right-card__content">

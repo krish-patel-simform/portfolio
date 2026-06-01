@@ -39,6 +39,11 @@
   cursor: pointer;
 }
 
+.about__right-card__icon {
+  padding: var(--rem-half);
+  border-radius: var(--radius);
+}
+
 .about__right-card__content {
   display: flex;
   flex-direction: column;
