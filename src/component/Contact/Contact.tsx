@@ -10,12 +10,14 @@ import Send from "reicon-react/icons/Send";
 import Input from "../Input/Input";
 import Button from "../Button/Button";
 import TextArea from "../Input/TextArea";
+import { useForm, ValidationError } from "@formspree/react";
+import { useData } from "../hooks/useData";
 
 const ContactInfoCard = ({ Icon, content, title }: ContactInfoCardProps) => {
   return (
     <div className="contact-info-card-container">
       <section className="contact-info-card__logo">
-        {<Icon fill="#6B6DCE" />}
+        {<Icon color="#6B6DCE" />}
       </section>
       <section className="contact-info-card__content">
         <p>{title}</p>
@@ -25,27 +27,31 @@ const ContactInfoCard = ({ Icon, content, title }: ContactInfoCardProps) => {
   );
 };
 
-const CONTACT_DATA = [
-  {
-    Icon: Mailbox,
-    title: "Email",
-    content: "knp839@gamil.com",
-  },
-  {
-    Icon: Phone,
-    title: "Phone",
-    content: "+91 7096098839",
-  },
-  {
-    Icon: LocationTick,
-    title: "Location",
-    content: "India",
-  },
-];
+export default function Contact({ id }: { id: string }) {
+  const [state, handleSubmit] = useForm("mrednyod");
+  const data = useData();
+  console.log("bnfdji");
 
-export default function Contact() {
+  const CONTACT_DATA = [
+    {
+      Icon: Mailbox,
+      title: "Email",
+      content: data.email,
+    },
+    {
+      Icon: Phone,
+      title: "Phone",
+      content: data.phone,
+    },
+    {
+      Icon: LocationTick,
+      title: "Location",
+      content: data.location,
+    },
+  ];
+
   return (
-    <div className="contact-container">
+    <div className="contact-container" id={id}>
       <section className="conatct__left">
         <div className="conatct__left-content">
           <p className="highlight-text">CONTACT</p>
@@ -72,11 +78,26 @@ export default function Contact() {
         </div>
       </section>
       <section className="contact__right">
-        <form className="contact__right-form">
+        <form action={handleSubmit} className="contact__right-form">
           <div className="contact__right-form-input">
             <Input type="text" name="text" placeholder="Your Name" />
+            <ValidationError
+              prefix="Name"
+              field="message"
+              errors={state.errors}
+            />
             <Input type="email" name="email" placeholder="Your Email" />
+            <ValidationError
+              prefix="Email"
+              field="email"
+              errors={state.errors}
+            />
             <TextArea rows={5} placeholder="Message" />
+            <ValidationError
+              prefix="Message"
+              field="message"
+              errors={state.errors}
+            />
           </div>
           <div className="contact__right-form-btn">
             <Button
@@ -87,6 +108,7 @@ export default function Contact() {
             />
           </div>
         </form>
+        {state.succeeded ? <h3>Thank's for submitting</h3> : null}
       </section>
     </div>
   );

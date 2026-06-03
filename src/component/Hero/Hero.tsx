@@ -2,10 +2,12 @@ import "./hero.style.css";
 import Button from "../Button/Button";
 import ArrowRight from "reicon-react/icons/ArrowRight";
 import MyImage from "../../assets/my.png";
+import { useData } from "../hooks/useData";
 
-export default function Hero() {
+export default function Hero({ id }: { id: string }) {
+  const data = useData();
   return (
-    <div className="hero">
+    <div className="hero" id={id}>
       <section>{/* phoro with some bg */}</section>
 
       <section className="hero__left">
@@ -15,10 +17,10 @@ export default function Hero() {
       <section className="hero__right">
         <p>hey, I'am</p>
         <div className="hero__heading">
-          <p>Krish</p>
-          <p>Patel</p>
+          <p>{data.firstName}</p>
+          <p>{data.lastName}</p>
         </div>
-        <p className="highlight-text">Frontend Developer</p>
+        <p className="highlight-text">{data.role}</p>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis
           libero ipsam deleniti, perspiciatis voluptates quisquam iste

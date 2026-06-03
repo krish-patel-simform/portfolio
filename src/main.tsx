@@ -1,10 +1,13 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import App from "./App.tsx";
+import DataContextProvider from "./context/DataContext.tsx";
 
-createRoot(document.getElementById('root')!).render(
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <App />
+    <DataContextProvider>
+      <App />
+    </DataContextProvider>
   </StrictMode>,
-)
+);

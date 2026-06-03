@@ -5,33 +5,37 @@ import ArrowRight from "reicon-react/icons/ArrowRight";
 import MoneyBag from "reicon-react/icons/MoneyBag";
 import Location2 from "reicon-react/icons/Location";
 import Laptop3 from "reicon-react/icons/Laptop3";
-const ABOUT_INFO = [
-  {
-    title: "Experience",
-    content: "1+ Years",
-    Icon: MoneyBag,
-    bgColor: "#eaeaf7ff",
-    iconFillColor: "#6B6DCE",
-  },
-  {
-    title: "Projects",
-    content: "10+ Completed",
-    Icon: Laptop3,
-    bgColor: "#d4eedfff",
-    iconFillColor: "#5CC189",
-  },
-  {
-    title: "Location",
-    content: "India",
-    Icon: Location2,
-    bgColor: "#FDE7E8",
-    iconFillColor: "#E85560",
-  },
-];
+import { useData } from "../hooks/useData";
 
-export default function About() {
+export default function About({ id }: { id: string }) {
+  const data = useData();
+
+  const ABOUT_INFO = [
+    {
+      title: "Experience",
+      content: `${data.experience} Years`,
+      Icon: MoneyBag,
+      bgColor: "#eaeaf7ff",
+      iconFillColor: "#6B6DCE",
+    },
+    {
+      title: "Projects",
+      content: `${data.projects} + Completed`,
+      Icon: Laptop3,
+      bgColor: "#d4eedfff",
+      iconFillColor: "#5CC189",
+    },
+    {
+      title: "Location",
+      content: data.location,
+      Icon: Location2,
+      bgColor: "#FDE7E8",
+      iconFillColor: "#E85560",
+    },
+  ];
+
   return (
-    <div className="about">
+    <div className="about" id={id}>
       <section className="about__left">
         <p className="highlight-text">ABOUT ME</p>
         <p className="heading">Get to know me</p>
@@ -49,8 +53,8 @@ export default function About() {
         <div className="about__right-info">
           {ABOUT_INFO.map((info, index) => {
             return (
-              <div className="about__right-card-container">
-                <div key={index} className="about__right-card">
+              <div key={index} className="about__right-card-container">
+                <div className="about__right-card">
                   <div
                     className="about__right-card__icon"
                     style={{ backgroundColor: info.bgColor }}

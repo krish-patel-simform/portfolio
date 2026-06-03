@@ -1,41 +1,11 @@
+import { useData } from "../hooks/useData";
 import "./skill.style.css";
-import HtmlImage from "../../assets/html.png";
-import CssImage from "../../assets/css.png";
-import ReactImage from "../../assets/react.png";
-import ReactNativeImage from "../../assets/react-native.png";
-import JSImage from "../../assets/js.png";
-import NodeImage from "../../assets/node.png";
 
-const TECHNOLOGIES = [
-  {
-    image: ReactImage,
-    title: "React",
-  },
-  {
-    image: ReactNativeImage,
-    title: "React Native",
-  },
-  {
-    image: NodeImage,
-    title: "Node",
-  },
-  {
-    image: JSImage,
-    title: "Java Script",
-  },
-  {
-    image: CssImage,
-    title: "CSS",
-  },
-  {
-    image: HtmlImage,
-    title: "HTML",
-  },
-];
+export default function Skills({ id }: { id: string }) {
+  const skills = useData().skills;
 
-export default function Skills() {
   return (
-    <div className="skill-container">
+    <div className="skill-container" id={id}>
       <section className="skill-header">
         {/* header */}
         <p className="highlight-text">MY SKILLS</p>
@@ -43,11 +13,11 @@ export default function Skills() {
       </section>
       <section className="skill-technology-list">
         {/* list of technology */}
-        {TECHNOLOGIES.map((technology, index) => {
+        {skills.map((skill, index) => {
           return (
             <div key={index} className="skill-technology-card">
-              <img src={technology.image} alt={technology.title} />
-              <p>{technology.title}</p>
+              {skill.image ? <img src={skill.image} alt={skill.title} /> : null}
+              <p>{skill.title}</p>
             </div>
           );
         })}

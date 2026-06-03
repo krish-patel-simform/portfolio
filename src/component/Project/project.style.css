@@ -1,0 +1,12 @@
+.project-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--rem-1);
+  padding: var(--rem-3);
+}
+
+.project-grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--rem-3);
+}
