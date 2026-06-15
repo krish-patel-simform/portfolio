@@ -1,11 +1,11 @@
-import { useData } from "../hooks/useData";
+import { useData } from "../../hooks/useData";
 import "./skill.style.css";
 
-export default function Skills({ id }: { id: string }) {
+export default function Skills() {
   const skills = useData().skills;
 
   return (
-    <div className="skill-container" id={id}>
+    <div className="skill-container" id={"skills"}>
       <section className="skill-header">
         {/* header */}
         <p className="highlight-text">MY SKILLS</p>

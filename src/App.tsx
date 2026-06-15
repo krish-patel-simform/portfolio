@@ -10,11 +10,11 @@ function App() {
   return (
     <section className="main-container">
       <Header />
-      <Hero id={"hero"} />
-      <About id={"about"} />
-      <Skills id={"skills"} />
-      <Project id={"project"} />
-      <Contact id={"contact"} />
+      <Hero />
+      <About />
+      <Skills />
+      <Project />
+      <Contact />
     </section>
   );
 }

@@ -5,9 +5,9 @@ import ArrowRight from "reicon-react/icons/ArrowRight";
 import MoneyBag from "reicon-react/icons/MoneyBag";
 import Location2 from "reicon-react/icons/Location";
 import Laptop3 from "reicon-react/icons/Laptop3";
-import { useData } from "../hooks/useData";
+import { useData } from "../../hooks/useData";
 
-export default function About({ id }: { id: string }) {
+export default function About() {
   const data = useData();
 
   const ABOUT_INFO = [
@@ -35,7 +35,7 @@ export default function About({ id }: { id: string }) {
   ];
 
   return (
-    <div className="about" id={id}>
+    <div className="about" id={"about"}>
       <section className="about__left">
         <p className="highlight-text">ABOUT ME</p>
         <p className="heading">Get to know me</p>

@@ -1,7 +1,5 @@
 import "./contact.style.css";
 import "./contact.style.css";
-import type { ContactInfoCardProps } from "./contact.type";
-
 import Mailbox from "reicon-react/icons/Mailbox";
 import Phone from "reicon-react/icons/Phone";
 import LocationTick from "reicon-react/icons/LocationTick";
@@ -11,23 +9,10 @@ import Input from "../Input/Input";
 import Button from "../Button/Button";
 import TextArea from "../Input/TextArea";
 import { useForm, ValidationError } from "@formspree/react";
-import { useData } from "../hooks/useData";
+import { useData } from "../../hooks/useData";
+import { ContactInfoCard } from "../Card/ContactInfoCard";
 
-const ContactInfoCard = ({ Icon, content, title }: ContactInfoCardProps) => {
-  return (
-    <div className="contact-info-card-container">
-      <section className="contact-info-card__logo">
-        {<Icon color="#6B6DCE" />}
-      </section>
-      <section className="contact-info-card__content">
-        <p>{title}</p>
-        <p>{content}</p>
-      </section>
-    </div>
-  );
-};
-
-export default function Contact({ id }: { id: string }) {
+export default function Contact() {
   const [state, handleSubmit] = useForm("mrednyod");
   const data = useData();
   console.log("bnfdji");
@@ -51,7 +36,7 @@ export default function Contact({ id }: { id: string }) {
   ];
 
   return (
-    <div className="contact-container" id={id}>
+    <div className="contact-container" id={"contact"}>
       <section className="conatct__left">
         <div className="conatct__left-content">
           <p className="highlight-text">CONTACT</p>

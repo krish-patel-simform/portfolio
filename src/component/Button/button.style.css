@@ -8,6 +8,7 @@
   cursor: pointer;
   font-size: var(--rem-1);
   align-items: center;
+  transition: transform 0.3s ease;
 }
 
 .btn-Primary {
@@ -18,4 +19,12 @@
   background-color: var(--btn-bg-secondary);
   color: black;
   border: 1px solid var(--primary-color);
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.btn:focus {
+  border: 1.5px solid red;
 }
