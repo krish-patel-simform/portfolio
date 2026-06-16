@@ -1,0 +1,7 @@
+.main-container {
+  background-color: var(--app-bg);
+  padding: var(--rem-1) var(--rem-1) 2rem;
+  gap: var(--rem-1);
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,62 @@
+{
+  "firstName": "Krish",
+  "lastName": "Patel",
+  "role": "Frontend Developer",
+  "email": "krish.patel@simformsolutions.com",
+  "phone": "+91 7096098839",
+  "experience": "1",
+  "projects": "10",
+  "location": "India",
+  "skills": [
+    {
+      "image": "./images/skills/react.png",
+      "title": "React"
+    },
+    {
+      "image": "./images/skills/react-native.png",
+      "title": "React Native"
+    },
+    {
+      "image": "./images/skills/node.png",
+      "title": "Node"
+    },
+    {
+      "image": "./images/skills/js.png",
+      "title": "Java Script"
+    },
+    {
+      "image": "./images/skills/css.png",
+      "title": "CSS"
+    },
+    {
+      "image": "./images/skills/html.png",
+      "title": "HTML"
+    }
+  ],
+  "liveProjects" : [
+    {
+      "title" : "Lane Runner",
+      "description" : "An interactive lane‑running game built with TypeScript and React, where players dodge obstacles and switch lanes for higher scores. Deployed on Netlify for smooth and accessible gameplay.",
+      "link" : "https://lane-runner-kp.netlify.app/",
+      "image" : "./images/projects/lane-runner.png"
+    },
+    {
+      "title" : "Live Location Sharing",
+      "description" : "A JavaScript app that uses the Geolocation API to capture latitude and longitude, then sends updates via WebSockets to a server. The server broadcasts these coordinates to all connected clients, showing everyone’s live positions on a shared map.",
+      "link" : "https://live-location-sharing.netlify.app/?room=1273&role=sender",
+      "image"  : "./images/projects/live-location-sharing.png"
+    },
+    {
+      "title" : "Calculator",
+      "description" : "A simple calculator built with TypeScript and React, supporting basic arithmetic operations with a clean UI. Deployed on Netlify for easy access and smooth performance.",
+      "link" : "https://calculator-kp.netlify.app/",
+      "image"  : "./images/projects/calculator.png"
+    },
+    {
+      "title" : "Lane Runner",
+      "description" : "An interactive lane‑running game built with TypeScript and React, where players dodge obstacles and switch lanes for higher scores. Deployed on Netlify for smooth and accessible gameplay.",
+      "link" : "https://lane-runner-kp.netlify.app/",
+      "image"  : "./images/projects/lane-runner.png"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+.btn {
+  display: flex;
+  gap: var(--rem-1);
+  border-radius: var(--radius);
+  border: none;
+  outline: none;
+  padding: var(--rem-half) var(--rem-1);
+  cursor: pointer;
+  font-size: var(--rem-1);
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.btn-Primary {
+  background-color: var(--btn-bg-primary);
+  color: white;
+}
+.btn-Secondary {
+  background-color: var(--btn-bg-secondary);
+  color: black;
+  border: 1px solid var(--primary-color);
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.btn:focus {
+  border: 1.5px solid red;
+}

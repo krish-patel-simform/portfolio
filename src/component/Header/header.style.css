@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--rem-1) var(--rem-3);
+}
+
+.header__logo {
+}
+
+.header__logo-image {
+  height: 2rem;
+  aspect-ratio: 1/1;
+}
+
+.header__links {
+  display: flex;
+  gap: var(--rem-1);
+}
+
+.header__actions {
+}
